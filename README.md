@@ -1,4 +1,4 @@
-# Readable String 0.1.1
+# Readable String 1.0.1
 
 A simple module that takes an input stream and converts
 it to a readable stream.  This can be used to simplify
