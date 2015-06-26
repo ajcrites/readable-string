@@ -1,15 +1,13 @@
 {
   "name": "readable-string",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "Create a readable stream from a string",
   "author": "Andrew Crites (aka Explosion Pills) <ajcrites@gmail.com>",
-  "description": "Create a readable stream from a string",
-  "dependencies": {
-    "readable-stream": "~1.0.27-1",
-    "inherits": "~2.0.1"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/ajcrites/readable-string"
+  },
+  "dependencies": {
+    "readable-stream": "^2.0.1"
   }
 }

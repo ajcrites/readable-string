@@ -1,5 +1,5 @@
 var Readable = require("readable-stream").Readable,
-    inherits = require("inherits");
+    util = require("util");
 
 function ReadableString(string, options) {
     if (!(this instanceof ReadableString)) {
@@ -10,10 +10,12 @@ function ReadableString(string, options) {
 
     Readable.call(this, options);
 }
-inherits(ReadableString, Readable);
+util.inherits(ReadableString, Readable);
 
 ReadableString.prototype._read = function (end) {
-    this.push(this._string.slice(this._lastStart), end);
+    end = this._lastStart + end;
+    // Only push requested amount
+    this.push(this._string.slice(this._lastStart, end));
 
     this._lastStart = end;
     // Finished reading; got to end of the buffer
